@@ -1,77 +1,60 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
+*{box-sizing:border-box}
+body{
+  font-family:Inter,Arial,Helvetica,sans-serif;
+  background:#f3f6fb;
+  margin:0;
+  color:#222;
 }
-
-body {
-    background: #f3f3f3;
-    display: flex;
-    justify-content: center;
-    padding: 40px;
+header{
+  background:#2b6ef6;
+  color:#fff;
+  padding:18px 20px;
 }
-
-.container {
-    background: white;
-    padding: 25px;
-    width: 100%;
-    max-width: 400px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #00000020;
+header h1{margin:0;font-size:20px}
+header .sub{opacity:.9;margin-top:6px;font-size:13px}
+.wrap{
+  display:flex;
+  gap:20px;
+  max-width:1000px;
+  margin:24px auto;
+  padding:0 12px;
+  align-items:flex-start;
 }
-
-h1, h2 {
-    margin-bottom: 15px;
-    text-align: center;
+.card{
+  background:#fff;
+  padding:16px;
+  border-radius:8px;
+  box-shadow:0 6px 18px rgba(15,23,42,.06);
+  flex:1;
 }
-
-form input {
-    width: 100%;
-    padding: 12px;
-    margin: 5px 0 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+.card h2{margin-top:0}
+input[type="text"],input[type="email"]{
+  width:100%;
+  padding:10px;
+  margin:6px 0 12px;
+  border:1px solid #d6dbe8;
+  border-radius:6px;
 }
-
-button {
-    width: 100%;
-    padding: 12px;
-    background: #007bff;
-    border: none;
-    color: white;
-    font-size: 16px;
-    border-radius: 6px;
-    cursor: pointer;
+.grid{display:flex;gap:8px}
+.btn{padding:10px;border-radius:6px;border:1px solid #d6dbe8;background:#fff;cursor:pointer}
+.btn.primary{background:#2b6ef6;color:#fff;border-color:#2b6ef6}
+.lista{list-style:none;padding:0;margin:8px 0}
+.lista li{
+  padding:10px;
+  border-radius:6px;
+  background:#fbfbff;
+  border:1px solid #eef2ff;
+  margin-bottom:8px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
 }
-
-button:hover {
-    background: #0056c7;
-}
-
-#busca {
-    width: 100%;
-    padding: 12px;
-    margin: 20px 0;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-}
-
-#lista li {
-    padding: 10px;
-    background: #fafafa;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    margin-bottom: 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#lista li button {
-    background: #ff4747;
-}
-
-#lista li button:hover {
-    background: #d33434;
+.item-info{flex:1}
+.item-actions{display:flex;gap:6px}
+.btn.small{padding:6px 8px;font-size:13px}
+.btn.danger{background:#ff4d4f;color:#fff;border-color:#ff4d4f}
+footer{max-width:1000px;margin:10px auto;padding:0 12px;text-align:right;color:#666}
+@media(max-width:800px){
+  .wrap{flex-direction:column;padding:12px}
 }

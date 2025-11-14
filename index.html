@@ -1,30 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sistema de Cadastro</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Protótipo - Sistema de Cadastros</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header>
+    <h1>Protótipo: Sistema de Cadastros</h1>
+    <p class="sub">Mini sistema web (HTML/CSS/JS) — CRUD + Persistência</p>
+  </header>
 
-    <div class="container">
-        <h1>Sistema de Cadastro</h1>
+  <main class="wrap">
+    <section class="card">
+      <h2>Novo cadastro</h2>
+      <form id="formCadastro">
+        <input id="nome" type="text" placeholder="Nome" required />
+        <input id="email" type="email" placeholder="Email" required />
+        <input id="telefone" type="text" placeholder="Telefone" />
+        <div class="grid">
+          <button type="submit" class="btn primary">Salvar</button>
+          <button type="button" id="btnCancelar" class="btn">Cancelar edição</button>
+        </div>
+      </form>
+    </section>
 
-        <form id="cadastroForm">
-            <input type="text" id="nome" placeholder="Nome" required>
-            <input type="email" id="email" placeholder="Email" required>
-            <input type="text" id="telefone" placeholder="Telefone" required>
+    <section class="card">
+      <h2>Buscar</h2>
+      <input id="buscar" type="text" placeholder="Buscar por nome ou email..." />
+      <h2>Lista de cadastros</h2>
+      <ul id="lista" class="lista"></ul>
+    </section>
+  </main>
 
-            <button type="submit">Cadastrar</button>
-        </form>
+  <footer>
+    <small>Autor: Mateus Rocha de Miranda</small>
+  </footer>
 
-        <input type="text" id="busca" placeholder="Buscar por nome...">
-
-        <h2>Lista de Cadastrados</h2>
-        <ul id="lista"></ul>
-    </div>
-
-    <script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
