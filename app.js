@@ -1,27 +1,46 @@
-const inputNome = document.getElementById("inputNome");
+const form = document.getElementById("cadastroForm");
 const lista = document.getElementById("lista");
+const busca = document.getElementById("busca");
 
-function adicionarNome() {
-    const nome = inputNome.value.trim();
+let registros = [];
 
-    if (nome === "") {
-        alert("Digite um nome!");
-        return;
-    }
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-    const li = document.createElement("li");
-    li.textContent = nome;
+    const nome = document.getElementById("nome").value;
+    const email = document.getElementById("email").value;
+    const telefone = document.getElementById("telefone").value;
 
-    const btnRemover = document.createElement("button");
-    btnRemover.textContent = "Excluir";
-    btnRemover.className = "btn-remover";
+    const pessoa = { nome, email, telefone };
+    registros.push(pessoa);
 
-    btnRemover.onclick = () => {
-        li.remove();
-    };
+    form.reset();
+    renderLista(registros);
+});
 
-    li.appendChild(btnRemover);
-    lista.appendChild(li);
+function renderLista(arr) {
+    lista.innerHTML = "";
 
-    inputNome.value = "";
+    arr.forEach((pessoa, index) => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+            ${pessoa.nome} — ${pessoa.email} — ${pessoa.telefone}
+            <button onclick="remover(${index})">X</button>
+        `;
+        lista.appendChild(li);
+    });
 }
+
+function remover(i) {
+    registros.splice(i, 1);
+    renderLista(registros);
+}
+
+busca.addEventListener("input", () => {
+    const filtro = busca.value.toLowerCase();
+    const filtrados = registros.filter(p =>
+        p.nome.toLowerCase().includes(filtro)
+    );
+
+    renderLista(filtrados);
+});

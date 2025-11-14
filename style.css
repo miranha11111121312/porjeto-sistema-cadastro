@@ -1,72 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
 body {
-    background-color: #f2f2f2;
-    font-family: Arial, sans-serif;
+    background: #f3f3f3;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    padding-top: 40px;
+    padding: 40px;
 }
 
 .container {
     background: white;
-    padding: 20px;
-    width: 320px;
+    padding: 25px;
+    width: 100%;
+    max-width: 400px;
     border-radius: 10px;
     box-shadow: 0 0 10px #00000020;
 }
 
-h1 {
+h1, h2 {
+    margin-bottom: 15px;
     text-align: center;
-    margin-bottom: 20px;
 }
 
-#inputNome {
+form input {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #aaa;
-    border-radius: 5px;
-    margin-bottom: 10px;
+    padding: 12px;
+    margin: 5px 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
 }
 
-.btn-add {
+button {
     width: 100%;
-    padding: 10px;
-    background-color: #3498db;
-    color: white;
+    padding: 12px;
+    background: #007bff;
     border: none;
-    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
     cursor: pointer;
 }
 
-.btn-add:hover {
-    background-color: #217dbb;
+button:hover {
+    background: #0056c7;
 }
 
-#lista {
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
+#busca {
+    width: 100%;
+    padding: 12px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
 }
 
 #lista li {
-    background: #e8e8e8;
-    padding: 8px;
+    padding: 10px;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 6px;
     margin-bottom: 8px;
-    border-radius: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.btn-remover {
-    padding: 4px 8px;
-    background-color: red;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+#lista li button {
+    background: #ff4747;
 }
 
-.btn-remover:hover {
-    background-color: darkred;
+#lista li button:hover {
+    background: #d33434;
 }
