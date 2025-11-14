@@ -1,16 +1,27 @@
-function adicionar() {
-    const input = document.getElementById("inputNome");
-    const lista = document.getElementById("lista");
+const inputNome = document.getElementById("inputNome");
+const lista = document.getElementById("lista");
 
-    if (input.value.trim() === "") {
-        alert("Digite um nome válido!");
+function adicionarNome() {
+    const nome = inputNome.value.trim();
+
+    if (nome === "") {
+        alert("Digite um nome!");
         return;
     }
 
-    const item = document.createElement("li");
-    item.textContent = input.value;
+    const li = document.createElement("li");
+    li.textContent = nome;
 
-    lista.appendChild(item);
+    const btnRemover = document.createElement("button");
+    btnRemover.textContent = "Excluir";
+    btnRemover.className = "btn-remover";
 
-    input.value = "";
+    btnRemover.onclick = () => {
+        li.remove();
+    };
+
+    li.appendChild(btnRemover);
+    lista.appendChild(li);
+
+    inputNome.value = "";
 }

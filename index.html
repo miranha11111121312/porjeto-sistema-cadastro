@@ -1,28 +1,21 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Protótipo</title>
+    <title>Sistema de Cadastro</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Protótipo de Solução</h1>
-    </header>
+    <div class="container">
+        <h1>Sistema de Cadastro</h1>
 
-    <main>
-        <section class="card">
-            <h2>Sistema de Cadastro</h2>
-            <p>Digite um nome para adicionar à lista:</p>
+        <input type="text" id="inputNome" placeholder="Digite um nome">
+        <button onclick="adicionarNome()" class="btn-add">Adicionar</button>
 
-            <input type="text" id="inputNome" placeholder="Digite um nome">
-            <button onclick="adicionar()">Adicionar</button>
-
-            <ul id="lista"></ul>
-        </section>
-    </main>
+        <ul id="lista"></ul>
+    </div>
 
     <script src="app.js"></script>
 </body>

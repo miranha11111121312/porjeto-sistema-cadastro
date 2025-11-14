@@ -1,49 +1,72 @@
 body {
-    margin: 0;
+    background-color: #f2f2f2;
     font-family: Arial, sans-serif;
-    background: #f3f3f3;
-}
-
-header {
-    background: #4c6ef5;
-    padding: 20px;
-    text-align: center;
-    color: white;
-}
-
-main {
     display: flex;
     justify-content: center;
-    padding: 40px;
+    align-items: flex-start;
+    padding-top: 40px;
 }
 
-.card {
+.container {
     background: white;
     padding: 20px;
-    width: 350px;
+    width: 320px;
     border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    box-shadow: 0 0 10px #00000020;
 }
 
-input {
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#inputNome {
     width: 100%;
     padding: 10px;
-    margin-top: 10px;
+    border: 1px solid #aaa;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    margin-bottom: 10px;
 }
 
-button {
+.btn-add {
     width: 100%;
     padding: 10px;
-    margin-top: 10px;
-    background: #4c6ef5;
+    background-color: #3498db;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-ul {
+.btn-add:hover {
+    background-color: #217dbb;
+}
+
+#lista {
+    list-style: none;
+    padding: 0;
     margin-top: 20px;
+}
+
+#lista li {
+    background: #e8e8e8;
+    padding: 8px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-remover {
+    padding: 4px 8px;
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-remover:hover {
+    background-color: darkred;
 }
